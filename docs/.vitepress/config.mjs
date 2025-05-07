@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+    base: '/14game/',
     title: "title",
     description: "text",
     themeConfig: {
