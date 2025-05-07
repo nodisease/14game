@@ -28,9 +28,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g vitepress
       - name: Build with VitePress
-        run: npx vitepress build docs
+        run: vitepress build docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -45,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
